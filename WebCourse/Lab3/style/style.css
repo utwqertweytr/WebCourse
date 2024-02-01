@@ -1,0 +1,18 @@
+body
+{
+    background-color: black;
+    color: aliceblue;
+}
+
+header
+{
+    color: aliceblue;
+}
+
+.mainpage-button
+{
+    color:aliceblue;
+    background-color: #DD783F;
+    border-radius: 3px;
+    
+}
