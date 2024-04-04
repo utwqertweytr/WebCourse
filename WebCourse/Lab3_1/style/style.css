@@ -29,7 +29,6 @@ header {
     right: 0px;
     padding-top: 17px;
     padding-bottom: 17px;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.33), transparent 99%);
 }
 
 .w-container {
@@ -42,26 +41,26 @@ header {
     text-wrap: nowrap;
 }
 
-.nav-logo {
+.navbar__logo {
     position: relative;
     float: left;
     text-decoration: none;
     color: #333333;
 }
 
-.nav-text {
+.navbar__text {
     margin-top: 7px;
     color: #fff;
     font-size: 26px;
     line-height: 26px;
 }
 
-.nav-menu {
+.navbar__menu {
     position: relative;
     float: right;
 }
 
-.nav-link {
+.navbar__menu__link {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -87,8 +86,8 @@ header {
     position: relative;
     height: 400px;
     padding-top: 184px;
-    background-position: center center;
-    background-image: linear-gradient(135deg, rgba(30, 33, 33, 0.82) 1%, rgba(30, 33, 33, 0.1) 99%), url(/WebCourse/Lab3_1/img/mainpage_bg.jpg);
+    background-position: 10% 50%;
+    background-image: linear-gradient(135deg, rgba(30, 33, 33, 0.82) 1%, rgba(30, 33, 33, 0.1) 99%), url(/img/mainpage_bg.jpg);
     background-size: auto, cover;
     background-repeat: no-repeat;
 }
@@ -109,7 +108,7 @@ header {
     display: inline;
 }
 
-.mainpage-h1 {
+.mainpage__h1 {
     font-weight: 500;
     margin-bottom: 14px;
     color: #fff;
@@ -118,7 +117,7 @@ header {
     letter-spacing: 2px;
 }
 
-.mainpage-subheader {
+.mainpage__subheader {
     font-weight: 300;
     font-family: Oxygen, sans-serif;
     font-size: 18px;
@@ -127,7 +126,7 @@ header {
     opacity: 0.63;
 }
 
-.mainpage-button {
+.mainpage__button {
     font-family: Oxygen, sans-serif;
     text-decoration: none;
     color: #fff;
@@ -138,23 +137,24 @@ header {
     border-width: 0;
 }
 
-.mainpage-bg {
+.mainpage__bg {
     position: absolute;
     left: 0;
     top: 0;
 }
 
-.category-section {
+.category-section__row {
     position: relative;
     padding-top: 9px;
+    max-height: 40px;
 }
 
-.category-item {
+.category-section__row__item {
     width: 16.66666666666667%;
     display: inline-block;
 }
 
-.category-link {
+.category-section__row__item__link {
     display: block;
     margin-right: 1px;
     padding-top: 13px;
@@ -166,7 +166,7 @@ header {
     font-family: Lora;
 }
 
-.category-row {
+.category-section__row {
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -176,7 +176,7 @@ a {
 }
 
 
-.section-title {
+.post-section__title {
     padding-top: 60px;
     font-size: 20px;
     line-height: 27px;
@@ -184,9 +184,10 @@ a {
     letter-spacing: 2px;
 }
 
-.section-heading {
+.post-section__heading {
     width: 960px;
     text-align: center;
+    margin: auto;
 }
 
 h2 {
@@ -210,6 +211,7 @@ h2 {
     margin: 7px 10px;
     max-width: 460px;
     max-height: 280px;
+    font-family: Lora;
 }
 
 .post-big-bg {
@@ -228,7 +230,7 @@ h2 {
     object-fit: cover;
 }
 
-.featured-text {
+.post-big__text {
     max-width: 420px;
     position: absolute;
     left: 0px;
@@ -237,7 +239,7 @@ h2 {
     padding: 60px 20px 62px 20px;
 }
 
-.featured-title {
+.post-big__text__title {
     font-weight: 400;
     display: block;
     margin-bottom: 4px;
@@ -248,7 +250,7 @@ h2 {
     text-align: left;
 }
 
-.featured-description {
+.post-big__text__description {
     padding-right: 44px;
     font-family: Oxygen, sans-serif;
     color: hsla(0, 0%, 100%, 0.7);
@@ -257,7 +259,7 @@ h2 {
     text-align: left;
 }
 
-.featured-details {
+.post-big__text__details {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -265,7 +267,7 @@ h2 {
     padding: 10px 20px 15px 20px;
 }
 
-.author-img {
+.post-big__text__details__author-img {
     position: static;
     right: 10px;
     bottom: 10px;
@@ -277,7 +279,19 @@ h2 {
     border-radius: 60px;
 }
 
-.author-name {
+.post-small__text__details__author-img {
+    position: static;
+    right: 10px;
+    bottom: 10px;
+    width: 26px;    
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    float: left;
+    border-radius: 60px;
+}
+
+.post-big__text__details__author-name {
     font-size: 12px;
     float: left;
     font-family: Oxygen, sans-serif;
@@ -287,11 +301,25 @@ h2 {
     line-height: 35px;
 }
 
-.author-name.small {
+.post-big__text__details__author-name.small {
     color: #999;
 }
 
-.post-date {
+.post-small__text__details__author-name {
+    font-size: 12px;
+    float: left;
+    font-family: Oxygen, sans-serif;
+    color: #ffffff;
+    opacity: 70%;
+    font-size: 12px;
+    line-height: 35px;
+}
+
+.post-small__text__details__author-name.small {
+    color: #999;
+}
+
+.post-big__text__details__post-date {
     font-size: 12px;
     float: right;
     font-family: Oxygen, sans-serif;
@@ -301,12 +329,27 @@ h2 {
     line-height: 35px;
 }
 
-.post-date.small {
+.post-big__text__details__post-date.small {
+    color: #999;
+}
+
+.post-small__text__details__post-date {
+    font-size: 12px;
+    float: right;
+    font-family: Oxygen, sans-serif;
+    color: #ffffff;
+    opacity: 70%;
+    font-size: 12px;
+    line-height: 35px;
+}
+
+.post-small__text__details__post-date.small {
     color: #999;
 }
 
 .post-small {
     position: relative;
+    font-family: Lora;
     display: inline-block;
     overflow: hidden;
     border-radius: 3px;
@@ -319,7 +362,7 @@ h2 {
     margin-bottom: 6px;
 }
 
-.recent-text {
+.post-small-text {
     position: relative;
     overflow: hidden;
     text-wrap: wrap;
@@ -327,7 +370,7 @@ h2 {
     text-align: left;
 }
 
-.recent-title {
+.post-small-text__title {
     display: inline-block;
     margin-bottom: 6px;
     color: #101315;
@@ -337,7 +380,7 @@ h2 {
     text-decoration: none;
 }
 
-.recent-description {
+.post-small-text__description {
     overflow: hidden;
     position: relative;
     height: 40px;
@@ -348,7 +391,7 @@ h2 {
     padding: 0px 0px 13px 0px;
 }
 
-.recent-details {
+.post-small-text__details {
     border-top: 1px solid #efefef;
     height: 35px;
     background-color: #fcfcfc;
@@ -365,12 +408,13 @@ h2 {
 
 .post-section {
     background-color: #f7f7f7;
+    padding-bottom: 62px;
 }
 
 .footer-section {
-    background-image: url(/WebCourse/Lab3_1/img/footerbg.jpg);
+    background-image: linear-gradient(180deg, rgba(35, 47, 56, 0.47), rgba(35, 47, 56, 0.31) 99%), url(/img/footerbg.jpg);
+    background-position: 0% 60%;
     background-size: cover;
-    padding-top: 62px;
 }
 
 h2 {
@@ -389,4 +433,60 @@ h2 {
     margin: 16px auto;
     background-color: #dedede;
     list-style-type: lower-alpha;
+}
+
+.navbar.footer {
+    position: relative;
+    max-height: 60px;
+    padding-top: 27px;
+    padding-bottom: 47px;
+    background-color: rgba(35, 47, 56, 0.6);
+}
+
+.form-wrapper {
+    display: block;
+    width: 500px;
+    margin: 20px auto 100px;
+}
+
+.footer-section__title {
+    font-family: Oxygen, sans-serif;
+    padding-top: 62px;
+    color: #efefef;
+    margin: 0px;
+}
+
+.footer-section__divider {
+    display: block;
+    width: 20%;
+    height: 1px;
+    margin: 16px auto;
+    background-color: #dedede;
+    list-style-type: lower-alpha;
+}
+
+.form__field {
+    float: left;
+    padding: 8px 12px;
+    width: 75%;
+    height: 34px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: none;
+}
+
+.form__button {
+    width: 25%;
+    height: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 0px;
+    border: none;
+    background-color: hsla(0, 0%, 100%, 0.28);
+    color:#f7f7f7; 
+    font-family: Oxygen, sans-serif;
+}
+
+.form__field {
+    font-family: Lora;
 }
